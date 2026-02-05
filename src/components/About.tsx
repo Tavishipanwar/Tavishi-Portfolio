@@ -17,12 +17,12 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-32 relative overflow-hidden">
+    <section id="about" className="py-16 sm:py-32 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6" ref={ref}>
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
           {/* Left Column - Image/Visual */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -30,7 +30,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="relative aspect-square max-w-md mx-auto">
+            <div className="relative aspect-square max-w-xs sm:max-w-md mx-auto">
               {/* Decorative elements */}
               <motion.div
                 className="absolute inset-0 gradient-bg rounded-3xl"
@@ -76,7 +76,7 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-5xl font-bold mt-4 mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 mb-4 sm:mb-6"
             >
               Turning <span className="gradient-text">Vision</span> into Reality
             </motion.h2>
@@ -110,7 +110,7 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-4"
+              className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4"
             >
               {stats.map((stat, index) => (
                 <motion.div

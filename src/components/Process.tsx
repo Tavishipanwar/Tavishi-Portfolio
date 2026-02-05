@@ -53,22 +53,22 @@ export default function Process() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="process" className="py-32 bg-secondary/30 relative overflow-hidden">
+    <section id="process" className="py-16 sm:py-32 bg-secondary/30 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.02)_1px,transparent_1px)] bg-[size:50px_50px]" />
 
-      <div className="max-w-7xl mx-auto px-6" ref={ref}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6" ref={ref}>
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-10 sm:mb-20"
         >
           <span className="text-primary font-semibold tracking-wider uppercase text-sm">
             How I Work
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 mb-4 sm:mb-6">
             My <span className="gradient-text">Process</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -82,7 +82,7 @@ export default function Process() {
           {/* Connecting Line */}
           <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary/30 to-transparent hidden lg:block" />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {steps.map((step, index) => (
               <motion.div
                 key={step.number}
@@ -91,23 +91,23 @@ export default function Process() {
                 transition={{ duration: 0.6, delay: index * 0.15 }}
                 className="relative group"
               >
-                <div className="bg-card rounded-2xl p-8 h-full border border-border card-hover relative z-10">
+                <div className="bg-card rounded-2xl p-4 sm:p-8 h-full border border-border card-hover relative z-10">
                   {/* Number Badge */}
                   <motion.div
-                    className="w-16 h-16 rounded-2xl gradient-bg flex items-center justify-center text-white font-bold text-xl mb-6"
+                    className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl gradient-bg flex items-center justify-center text-white font-bold text-base sm:text-xl mb-4 sm:mb-6"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                   >
                     {step.number}
                   </motion.div>
 
                   {/* Icon */}
-                  <div className="text-primary mb-4">{step.icon}</div>
+                  <div className="text-primary mb-3 sm:mb-4 [&>svg]:w-6 [&>svg]:h-6 sm:[&>svg]:w-8 sm:[&>svg]:h-8">{step.icon}</div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="text-base sm:text-xl font-bold mb-2 sm:mb-3 group-hover:text-primary transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground">{step.description}</p>
+                  <p className="text-muted-foreground text-sm sm:text-base">{step.description}</p>
                 </div>
 
                 {/* Arrow (Desktop) */}

@@ -157,8 +157,8 @@ export default function Projects() {
       : projects.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="projects" className="py-32 relative">
-      <div className="max-w-7xl mx-auto px-6" ref={ref}>
+    <section id="projects" className="py-16 sm:py-32 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6" ref={ref}>
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -169,7 +169,7 @@ export default function Projects() {
           <span className="text-primary font-semibold tracking-wider uppercase text-sm">
             Portfolio
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 mb-4 sm:mb-6">
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -183,13 +183,13 @@ export default function Projects() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12"
         >
           {categories.map((category) => (
             <motion.button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
+              className={`px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
                 activeCategory === category
                   ? "gradient-bg text-white"
                   : "bg-secondary hover:bg-accent"
@@ -203,7 +203,7 @@ export default function Projects() {
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -321,7 +321,7 @@ export default function Projects() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/60 backdrop-blur-sm"
             onClick={() => setSelectedProject(null)}
           >
             <motion.div
@@ -329,7 +329,7 @@ export default function Projects() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative bg-card rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-hidden border border-border shadow-2xl"
+              className="relative bg-card rounded-t-3xl sm:rounded-3xl max-w-4xl w-full max-h-[85vh] sm:max-h-[90vh] overflow-hidden border border-border shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header with gradient */}
@@ -342,7 +342,7 @@ export default function Projects() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
-                <div className="absolute bottom-4 left-6 flex gap-2">
+                <div className="absolute bottom-4 left-4 sm:left-6 flex gap-2 flex-wrap">
                   {selectedProject.metrics.map((metric) => (
                     <div
                       key={metric.label}
@@ -356,9 +356,9 @@ export default function Projects() {
               </div>
 
               {/* Content */}
-              <div className="p-8 overflow-y-auto max-h-[calc(90vh-8rem)]">
+              <div className="p-4 sm:p-8 overflow-y-auto max-h-[calc(85vh-8rem)] sm:max-h-[calc(90vh-8rem)]">
                 <span className="text-sm text-primary font-medium">{selectedProject.category}</span>
-                <h3 className="text-3xl font-bold mt-2 mb-4">{selectedProject.title}</h3>
+                <h3 className="text-xl sm:text-3xl font-bold mt-2 mb-4">{selectedProject.title}</h3>
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-6">

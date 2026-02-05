@@ -40,7 +40,7 @@ export default function Footer() {
       <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent" />
 
       {/* Main Footer Content */}
-      <div className="relative max-w-7xl mx-auto px-6 pt-16 pb-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-8">
         {/* Top Section - CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -48,7 +48,7 @@ export default function Footer() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h3 className="text-3xl md:text-4xl font-bold mb-4">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             Let&apos;s Build Something <span className="gradient-text">Amazing</span>
           </h3>
           <p className="text-muted-foreground mb-6 max-w-md mx-auto">
@@ -71,7 +71,7 @@ export default function Footer() {
         <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent mb-12" />
 
         {/* Middle Section - Links & Info */}
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 sm:gap-12 mb-8 sm:mb-12">
           {/* Brand */}
           <div className="text-center md:text-left">
             <motion.a

@@ -46,11 +46,11 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-32 relative overflow-hidden">
+    <section id="contact" className="py-16 sm:py-32 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10" ref={ref}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10" ref={ref}>
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -61,7 +61,7 @@ export default function Contact() {
           <span className="text-primary font-semibold tracking-wider uppercase text-sm">
             Get In Touch
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 mb-4 sm:mb-6">
             Let&apos;s <span className="gradient-text">Connect</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -70,7 +70,7 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-10 sm:gap-16">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -178,7 +178,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col justify-center"
           >
-            <div className="bg-card rounded-2xl p-8 border border-border">
+            <div className="bg-card rounded-2xl p-5 sm:p-8 border border-border">
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
 
               <div className="space-y-6 mb-8">

@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="light" suppressHydrationWarning>
       <body className={`${inter.variable} ${playfair.variable} antialiased`}>
         <ThemeProvider>
           <div className="noise">{children}</div>

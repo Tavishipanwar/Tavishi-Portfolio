@@ -38,7 +38,7 @@ export default function Navigation() {
             : "py-6 bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Logo */}
           <motion.a
             href="#home"
@@ -130,9 +130,9 @@ export default function Navigation() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-background pt-24 md:hidden"
+            className="fixed inset-0 z-40 bg-background pt-20 md:hidden overflow-y-auto"
           >
-            <div className="flex flex-col items-center gap-8 p-8">
+            <div className="flex flex-col items-center gap-6 p-6 sm:p-8">
               {navItems.map((item, index) => (
                 <motion.a
                   key={item.name}

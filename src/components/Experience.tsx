@@ -60,12 +60,12 @@ export default function Experience() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-32 relative overflow-hidden">
+    <section className="py-16 sm:py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute left-0 top-0 bottom-0 w-1/2 bg-gradient-to-r from-primary/5 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-6" ref={ref}>
-        <div className="grid lg:grid-cols-2 gap-16 lg:min-h-[600px]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6" ref={ref}>
+        <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 lg:min-h-[600px]">
           {/* Left Column - Header (Fixed/Non-scrollable) */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -76,7 +76,7 @@ export default function Experience() {
             <span className="text-primary font-semibold tracking-wider uppercase text-sm">
               Career Journey
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 mb-4 sm:mb-6">
               Experience & <span className="gradient-text">Education</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
@@ -85,20 +85,20 @@ export default function Experience() {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <div className="bg-card rounded-xl p-6 border border-border">
-                <div className="text-4xl font-bold gradient-text">4+</div>
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
+              <div className="bg-card rounded-xl p-4 sm:p-6 border border-border">
+                <div className="text-3xl sm:text-4xl font-bold gradient-text">4+</div>
                 <div className="text-muted-foreground">Years Experience</div>
               </div>
-              <div className="bg-card rounded-xl p-6 border border-border">
-                <div className="text-4xl font-bold gradient-text">4.0</div>
+              <div className="bg-card rounded-xl p-4 sm:p-6 border border-border">
+                <div className="text-3xl sm:text-4xl font-bold gradient-text">4.0</div>
                 <div className="text-muted-foreground">GPA at Northwestern</div>
               </div>
             </div>
 
             {/* Certifications */}
-            <div className="bg-card rounded-xl p-6 border border-border">
-              <h3 className="font-semibold mb-4">Certifications</h3>
+            <div className="bg-card rounded-xl p-4 sm:p-6 border border-border">
+              <h3 className="font-semibold mb-3 sm:mb-4">Certifications</h3>
               <div className="flex flex-wrap gap-2">
                 {certifications.map((cert) => (
                   <span
@@ -112,8 +112,10 @@ export default function Experience() {
             </div>
 
             {/* Download Resume Button */}
-            <motion.button
-              className="mt-8 px-8 py-4 rounded-full gradient-bg text-white font-semibold flex items-center gap-2"
+            <motion.a
+              href="/TavishiResume.pdf"
+              download
+              className="mt-6 sm:mt-8 px-6 sm:px-8 py-3 sm:py-4 rounded-full gradient-bg text-white font-semibold flex items-center gap-2 w-fit text-sm sm:text-base"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -121,7 +123,7 @@ export default function Experience() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
               Download Resume
-            </motion.button>
+            </motion.a>
           </motion.div>
 
           {/* Right Column - Timeline (Scrollable) */}

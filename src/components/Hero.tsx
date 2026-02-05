@@ -57,7 +57,7 @@ export default function Hero() {
       {/* Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:100px_100px]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-32 text-center">
         {/* Greeting */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -73,7 +73,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
+          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6"
         >
           <span className="gradient-text">Tavishi</span>
         </motion.h1>
@@ -83,9 +83,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="h-12 md:h-16 flex items-center justify-center mb-8"
+          className="h-10 sm:h-12 md:h-16 flex items-center justify-center mb-6 sm:mb-8"
         >
-          <span className="text-2xl md:text-4xl font-light text-muted-foreground">
+          <span className="text-xl sm:text-2xl md:text-4xl font-light text-muted-foreground">
             {displayText}
             <motion.span
               animate={{ opacity: [0, 1, 0] }}
@@ -100,7 +100,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12"
+          className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 sm:mb-12 px-2"
         >
           4+ years delivering enterprise platforms across cloud and automation ecosystems.
           Passionate about AI infrastructure, GenAI-enabled workflows, and building scalable, data-driven enterprise software.
@@ -111,11 +111,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0"
         >
           <motion.a
             href="#projects"
-            className="px-8 py-4 rounded-full gradient-bg text-white font-semibold text-lg pulse-glow"
+            className="px-6 sm:px-8 py-3 sm:py-4 rounded-full gradient-bg text-white font-semibold text-base sm:text-lg pulse-glow text-center"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -123,7 +123,7 @@ export default function Hero() {
           </motion.a>
           <motion.a
             href="#contact"
-            className="px-8 py-4 rounded-full border-2 border-foreground/20 font-semibold text-lg hover:bg-foreground/5 transition-colors"
+            className="px-6 sm:px-8 py-3 sm:py-4 rounded-full border-2 border-foreground/20 font-semibold text-base sm:text-lg hover:bg-foreground/5 transition-colors text-center"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -136,7 +136,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}

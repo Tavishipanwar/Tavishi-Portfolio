@@ -88,7 +88,7 @@ export default function ProductGame() {
   };
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-16 sm:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
 
       <div className="max-w-5xl mx-auto px-6 relative" ref={ref}>
@@ -134,7 +134,7 @@ export default function ProductGame() {
         </motion.div>
 
         {/* Game Area */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
           {/* Backlog */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -145,7 +145,7 @@ export default function ProductGame() {
               📦 Feature Backlog
               <span className="text-xs text-muted-foreground">({backlog.length} items)</span>
             </h3>
-            <div className="space-y-2 min-h-[320px]">
+            <div className="space-y-2 min-h-[200px] sm:min-h-[320px]">
               <AnimatePresence mode="popLayout">
                 {backlog.map((feature) => {
                   const canAfford = feature.cost <= remainingBudget;
@@ -205,7 +205,7 @@ export default function ProductGame() {
               🚀 Your MVP
               <span className="text-xs text-muted-foreground">({mvp.length} features)</span>
             </h3>
-            <div className="min-h-[320px] p-4 rounded-xl border-2 border-dashed border-primary/30 bg-primary/5">
+            <div className="min-h-[200px] sm:min-h-[320px] p-3 sm:p-4 rounded-xl border-2 border-dashed border-primary/30 bg-primary/5">
               <AnimatePresence mode="popLayout">
                 {mvp.length === 0 ? (
                   <motion.div
